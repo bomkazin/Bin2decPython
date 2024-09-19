@@ -42,6 +42,9 @@ def converter():
             # If both conditions are met, exit the loop
             break
 
+    #Now we need to add and octal conversion after working on the client side
+
+
     # Convert the binary number to a list of digits
     list_binary = [int(x) for x in str(binary)]
     print(f"Binary list: {list_binary}")
