@@ -29,9 +29,18 @@
 def converter():
     print("I've got this\n\n")
 
-    # Define a binary number (you can also get input from the user)
-    binary = input("Enter the binary number max 8 numbers: ")
-    print(f"Binary: {binary}\n")
+    while True:
+        binary = input("Enter the binary number (max 8 characters): ")
+
+        # Check if the length of the binary input is within the valid range
+        if not (1 <= len(binary) <= 8):
+            print("Error: The binary number must be between 1 and 8 characters long.")
+        # Check if all characters in the binary input are either '0' or '1'
+        elif not all(char in '01' for char in binary):
+            print("Error: Only 0s and 1s are allowed.")
+        else:
+            # If both conditions are met, exit the loop
+            break
 
     # Convert the binary number to a list of digits
     list_binary = [int(x) for x in str(binary)]
